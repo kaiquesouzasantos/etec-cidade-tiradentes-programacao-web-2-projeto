@@ -1,4 +1,4 @@
-<h1 align=center>PROJETO FINAL - PW</h1>
+<h1 align=center>PROJETO FINAL - PW II</h1>
 
 <p align="center">
   <img src="etec.png" width="500">
@@ -27,5 +27,5 @@
 ### CONTRIBUIÇÃO
 
 ```
-$ git clone https://github.com/kaiquesouzasantos/etec199-2022-pw-projetoFinal.git 
+$ git clone https://github.com/kaiquesouzasantos/etec199-2022-pw2-projetoFinal.git 
 ```
