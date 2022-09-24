@@ -1,19 +1,27 @@
 <?php
     class Categoria{
-        private $id;
-        private $nome;
+        private $codCategoria, $nomeCategoria;
 
-        public function getId(){
-            return $this->id;
+        public function construct($nomeCategoria){
+            $this->nomeCategoria = $nomeCategoria;
         }
-        public function getNome(){
-            return $this->nome;
+
+        public function implement($codCategoria, $nomeCategoria){
+            $this->codCategoria = $codCategoria;
+            $this->nomeCategoria = $nomeCategoria;
         }
-        public function setId($id){
-            $this->id = $id;
+
+        public function getCodCategoria(){
+            return $this->codCategoria;
         }
-        public function setNome($nome){
-            $this->nome = $nome;
+        public function getNomeCategoria(){
+            return $this->nomeCategoria;
+        }
+        public function setCodCategoria($codCategoria){
+            $this->codCategoria = $codCategoria;
+        }
+        public function setNomeCategoria($nomeCategoria){
+            $this->nomeCategoria = $nomeCategoria;
         }
     }
 ?>

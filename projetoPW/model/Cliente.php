@@ -1,19 +1,10 @@
 <?php
 
     class Cliente{
-
-        private $id;
-        private $nome;
-        private $cpf;
-        private $email;
-        private $senha;
-        private $logradouro;
-        private $numLog;
-        private $complemento;
-        private $bairro;
-        private $cidade;
-        private $uf;
-        private $cep;
+        private 
+            $id, $nome, $cpf, $email, $senha, 
+            $logradouro, $numLog, $complemento, 
+            $bairro, $cidade, $uf, $cep;
 
         public function setId($id){
             $this->id = $id;
@@ -53,14 +44,6 @@
 
         public function getSenha(){
             return $this->senha;
-        }
-
-        public function setEmail($email){
-            $this->email = $email;
-        }
-
-        public function getEmail(){
-            return $this->email;
         }
 
         public function setLogradouro($logradouro){
@@ -118,6 +101,5 @@
         public function getCep(){
             return $this->cep;
         }
-
     }
 ?>

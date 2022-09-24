@@ -1,23 +1,33 @@
 <?php   
 
     class Produto{
-        private $id;
-        private $nome;
-        private $preco;
+        private $codProduto, $nomeProduto, $preco;
 
-
-        public function setId($id){
-            $this->id = $id;
-        }
-        public function getId(){
-            return $this->id;
-        }
-        public function setNome($nome){
-            $this->nome = $nome;
+        public function construct($nomeProduto, $preco){
+            $this->nomeProduto = $nomeProduto;
+            $this->preco = $preco;
         }
 
-        public function getNome(){
-            return $this->nome;
+        public function implement($codProduto, $nomeProduto, $preco){
+            $this->codProduto = $codProduto;
+            $this->nomeProduto = $nomeProduto;
+            $this->preco = $preco;
+        }
+
+        public function setCodProduto($codProduto){
+            $this->codProduto = $codProduto;
+        }
+
+        public function getCodProduto(){
+            return $this->codProduto;
+        }
+
+        public function setNomeProduto($nomeProduto){
+            $this->nomeProduto = $nomeProduto;
+        }
+
+        public function getNomeProduto(){
+            return $this->nomeProduto;
         }
 
         public function setPreco($preco){
@@ -27,7 +37,5 @@
         public function getPreco(){
             return $this->preco;
         }
-
-       
     }
 ?>

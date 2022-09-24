@@ -1,27 +1,13 @@
 <?php
-
-    require_once 'model/Cliente.php';
-
     class Venda{
+        private $id, $dataVenda, $valorTotal, $status, $idCliente;
 
-        private $id;
-        private $dataVenda;
-        private $valorTotal;
-        private $status;
-        private $idCliente;
-
-        public function __construct(){
-            $this-> idCliente = new Cliente();
-        }
-
-        
         public function getId(){
             return $this->id;
         }
 
         public function setId($id){
             $this->id = $id;
-
         }
         
         public function getDataVenda(){
@@ -38,16 +24,14 @@
 
         public function setValorTotal($valorTotal){
             $this->valorTotal = $valorTotal;
-
         }
 
         public function getStatus(){
             return $this->status;
         }
         
-        public function setStatus($status): self{
+        public function setStatus($status){
             $this->status = $status;
-
         }
 
         public function getIdCliente(){
@@ -56,7 +40,6 @@
 
         public function setIdCliente($idCliente){
             $this->idCliente = $idCliente;
-
         }
     }
 ?>

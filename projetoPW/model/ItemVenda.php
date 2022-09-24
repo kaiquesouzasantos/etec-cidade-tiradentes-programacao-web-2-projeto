@@ -1,11 +1,7 @@
 <?php
 
     class ItemVenda{
-
-        private $id;
-        private $quantidade;
-        private $subTotal;
-
+        private $id, $quantidade, $subTotal;
         
         public function getId(){
             return $this->id;
