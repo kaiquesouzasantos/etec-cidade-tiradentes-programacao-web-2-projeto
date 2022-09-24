@@ -6,9 +6,11 @@
             return Conexao::getConexao();
         }
 
-        public static function cadastrarProduto($nome, $preco, $categoria){
+        public static function cadastrarProduto($nome, $preco, $codCategoria){
             $produto = new Produto();
-            $produto->construct($nome, $preco, $categoria);
+            $produto->construct_min(
+                $nome, $preco, CategoriaDAO::retornaCategoria($codCategoria)
+            );
 
             $insertProduto = "INSERT INTO tbProduto(nomeProduto, precoProduto, codCategoria) 
                                 VALUES (:nome, :preco, :categoria)";
@@ -16,21 +18,21 @@
             $stmt = self::getConexao()->prepare($insertProduto);
         
             $stmt->bindValue(":nome", $produto->getNomeProduto());
-            $stmt->bindValue(":preco", $produto->getPreco());
-            // $stmt->bindValue(":categoria", $produto->());
+            $stmt->bindValue(":preco", $produto->getPrecoProduto());
+            $stmt->bindValue(":categoria", $produto->getCategoria()->getCodCategoria());
 
             $stmt->execute();
 
             return true;
         }
 
-        public static function retornaPrduto($codProduto){
+        public static function retornaProduto($codProduto) : Produto {
             $stmt = self::getConexao()->query("SELECT * FROM tbProduto WHERE codProduto = ${codProduto}");
             
             $produto = new Produto();
-            $produto->implement(
+            $produto->contruct_full(
                 $stmt['codProduto'], $stmt['nomeProduto'], 
-                $stmt['precoProduto']
+                $stmt['precoProduto'], CategoriaDAO::retornaCategoria($stmt['codCategoria'])
             );
 
             return $produto;
@@ -42,9 +44,9 @@
 
             foreach($stmt as $produto){
                 $objeto = new Produto();
-                $objeto->implement(
+                $objeto->contruct_full(
                     $produto['codProduto'], $produto['nomeProduto'], 
-                    $produto['precoProduto']
+                    $produto['precoProduto'], CategoriaDAO::retornaCategoria($produto['codCategoria'])
                 );
                 
                 array_push($produtos, $objeto);

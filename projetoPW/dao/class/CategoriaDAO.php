@@ -8,7 +8,7 @@
 
         public static function cadastrarCategoria($nome){
             $categoria = new Categoria();
-            $categoria->construct($nome);
+            $categoria->construct_min($nome);
 
             $insertCategoria = "INSERT INTO tbCategoria(nomeCategoria) 
                                 VALUES (:nome)";
@@ -22,13 +22,22 @@
             return true;
         }
 
+        public static function retornaCategoria($codCategoria) : Categoria {
+            $stmt = self::getConexao()->query("SELECT * FROM tbProduto WHERE codProduto = ${codCategoria}");
+            
+            $categoria = new Categoria();
+            $categoria->construct_full($stmt['codCategoria'], $stmt['nomeCategoria']);
+
+            return $categoria;
+        }
+
         public static function listaCategoria() : array {
             $categorias = array();
             $stmt = self::getConexao()->query("SELECT * FROM tbCategoria")->fetchAll();
 
             foreach($stmt as $categoria){
                 $objeto = new Categoria();
-                $objeto->implement(
+                $objeto->construct_full(
                     $categoria['codCategoria'], $categoria['nomeCategoria']
                 );
                 
