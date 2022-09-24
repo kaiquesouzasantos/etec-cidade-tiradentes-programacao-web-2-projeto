@@ -1,17 +1,17 @@
 <?php   
 
     class Produto{
-        private $codProduto, $nomeProduto, $preco, $codCategoria;
+        private $codProduto, $nomeProduto, $precoProduto, $codCategoria;
 
-        public function construct($nomeProduto, $preco){
+        public function construct($nomeProduto, $precoProduto){
             $this->nomeProduto = $nomeProduto;
-            $this->preco = $preco;
+            $this->precoProduto = $precoProduto;
         }
 
-        public function implement($codProduto, $nomeProduto, $preco){
+        public function implement($codProduto, $nomeProduto, $precoProduto){
             $this->codProduto = $codProduto;
             $this->nomeProduto = $nomeProduto;
-            $this->preco = $preco;
+            $this->precoProduto = $precoProduto;
         }
 
         public function setCodProduto($codProduto){
@@ -30,12 +30,12 @@
             return $this->nomeProduto;
         }
 
-        public function setPreco($preco){
-            $this->preco = $preco;
+        public function setPrecoProduto($precoProduto){
+            $this->precoProduto = $precoProduto;
         }
 
-        public function getPreco(){
-            return $this->preco;
+        public function getPrecoProduto(){
+            return $this->precoProduto;
         }
         
         public function setCodCategoria($codCategoria){
