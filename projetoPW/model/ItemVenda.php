@@ -1,30 +1,30 @@
 <?php
 
     class ItemVenda{
-        private $id, $quantidade, $subTotal;
+        private $codItemvenda, $qtdItemvenda, $subtotalItemVenda;
         
-        public function getId(){
-            return $this->id;
+        public function getCodItemvenda(){
+            return $this->codItemvenda;
         }
 
-        public function setId($id){
-            $this->id = $id;
+        public function setCodItemvenda($codItemvenda){
+            $this->codItemvenda = $codItemvenda;
         }
 
-        public function getQuantidade(){
-            return $this->quantidade;
+        public function getQtdItemvenda(){
+            return $this->qtdItemvenda;
         }
 
-        public function setQuantidade($quantidade){
-            $this->quantidade = $quantidade;
+        public function setQtdItemvenda($qtdItemvenda){
+            $this->qtdItemvenda = $qtdItemvenda;
         }
 
-        public function getSubTotal(){
-            return $this->subTotal;
+        public function getSubtotalItemVenda(){
+            return $this->subtotalItemVenda;
         }
 
-        public function setSubTotal($subTotal){
-            $this->subTotal = $subTotal;
+        public function setSubtotalItemVenda($subtotalItemVenda){
+            $this->subtotalItemVenda = $subtotalItemVenda;
         }
     }
 ?>
