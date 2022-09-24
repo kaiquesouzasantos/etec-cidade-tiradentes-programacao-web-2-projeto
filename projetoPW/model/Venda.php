@@ -1,6 +1,6 @@
 <?php
     class Venda{
-        private $codvenda, $dataVenda, $valorTotal, $status, $codCliente;
+        private $codvenda, $dataVenda, $valorTotalVenda, $statusVenda, $codCliente;
 
         public function getCodVenda(){
             return $this->codVenda;
@@ -18,20 +18,20 @@
             $this->dataVenda = $dataVenda;
         }
 
-        public function getValorTotal(){
-            return $this->valorTotal;
+        public function getValorTotalVenda(){
+            return $this->valorTotalVenda;
         }
 
-        public function setValorTotal($valorTotal){
-            $this->valorTotal = $valorTotal;
+        public function setValorTotalVends($valorTotalVenda){
+            $this->valorTotalVenda = $valorTotalVenda;
         }
 
-        public function getStatus(){
-            return $this->status;
+        public function getStatusVenda(){
+            return $this->statusVenda;
         }
         
-        public function setStatus($status){
-            $this->status = $status;
+        public function setStatusVenda($statusVenda){
+            $this->statusVenda = $statusVenda;
         }
 
         public function getCodCliente(){
