@@ -1,7 +1,7 @@
 <?php   
 
     class Produto{
-        private $codProduto, $nomeProduto, $preco;
+        private $codProduto, $nomeProduto, $preco, $codCategoria;
 
         public function construct($nomeProduto, $preco){
             $this->nomeProduto = $nomeProduto;
@@ -36,6 +36,14 @@
 
         public function getPreco(){
             return $this->preco;
+        }
+        
+        public function setCodCategoria($codCategoria){
+            $this->codCategoria = $codCategoria;
+        }
+
+        public function getCodCategoria(){
+            return $this->codCategoria;
         }
     }
 ?>
