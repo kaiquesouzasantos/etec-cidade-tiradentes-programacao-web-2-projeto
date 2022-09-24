@@ -2,104 +2,104 @@
 
     class Cliente{
         private 
-            $id, $nome, $cpf, $email, $senha, 
-            $logradouro, $numLog, $complemento, 
-            $bairro, $cidade, $uf, $cep;
+            $codCliente, $nomeCliente, $cpfCliente, $emailCliente, $senhaCliente, 
+            $logradouroCliente, $numLogCliente, $complementoCliente, 
+            $bairroCliente, $cidadeCliente, $ufCliente, $cepCliente;
 
-        public function setId($id){
-            $this->id = $id;
+        public function setCodCliente($codCliente){
+            $this->codCliente = $codCliente;
         }
 
-        public function getId(){
-            return $this->id;
+        public function getCodCliente(){
+            return $this->codCliente;
         }
 
-        public function setNome($nome){
-            $this->nome = $nome;
+        public function setNomeCliente($nomeCliente){
+            $this->nomeCliente = $nomeCliente;
         }
 
-        public function getNome(){
-            return $this->nome;
+        public function getNomeCliente(){
+            return $this->nomeCliente;
         }
 
-        public function setCpf($cpf){
-            $this->cpf = $cpf;
+        public function setCpfCliente($cpfCliente){
+            $this->cpfCliente = $cpfCliente;
         }
 
-        public function getCpf(){
-            return $this->cpf;
+        public function getCpfCliente(){
+            return $this->cpfCliente;
         }
 
-        public function setEmail($email){
-            $this->email = $email;
+        public function setEmailCliente($emailCliente){
+            $this->emailCliente = $emailCliente;
         }
 
-        public function getEmail(){
-            return $this->email;
+        public function getEmailCliente(){
+            return $this->emailCliente;
         }
 
-        public function setSenha($senha){
-            $this->senha = $senha;
+        public function setSenhaCliente($senhaCliente){
+            $this->senhaCliente = $senhaCliente;
         }
 
-        public function getSenha(){
-            return $this->senha;
+        public function getSenhaCliente(){
+            return $this->senhaCliente;
         }
 
-        public function setLogradouro($logradouro){
-            $this->logradouro = $logradouro;
+        public function setLogradouroCliente($logradouroCliente){
+            $this->logradouroCliente = $logradouroCliente;
         }
 
-        public function getLogradoruro(){
-            return $this->logradouro;
+        public function getLogradoruroCliente(){
+            return $this->logradouroCliente;
         }
 
-        public function setNumLog($numLog){
-            $this->numLog = $numLog;
+        public function setNumLogCliente($numLogCliente){
+            $this->numLogCliente = $numLogCliente;
         }
 
-        public function getNumLog(){
-            return $this->numLog;
+        public function getNumLogCliente(){
+            return $this->numLogCliente;
         }
 
-        public function setComplemento($complemento){
-            $this->complemento = $complemento;
+        public function setComplementoCliente($complementoCliente){
+            $this->complementoCliente = $complementoCliente;
         }
 
-        public function getComplemento(){
-            return $this->complemento;
+        public function getComplementoCliente(){
+            return $this->complementoCliente;
         }
         
-        public function setBairro($bairro){
-            $this->bairro = $bairro;
+        public function setBairroCliente($bairroCliente){
+            $this->bairroCliente = $bairroCliente;
         }
 
-        public function getBairro(){
-            return $this->bairro;
+        public function getBairroCliente(){
+            return $this->bairroCliente;
         }
 
-        public function setCidade($cidade){
-            $this->cidade = $cidade;
+        public function setCidadeCliente($cidadeCliente){
+            $this->cidadeCliente = $cidadeCliente;
         }
 
-        public function getCidade(){
-            return $this->cidade;
+        public function getCidadeCliente(){
+            return $this->cidadeCliente;
         }
 
-        public function setUf($uf){
-            $this->uf = $uf;
+        public function setUfCliente($ufCliente){
+            $this->ufCliente = $ufCliente;
         }
 
-        public function getUf(){
-            return $this->uf;
+        public function getUfCliente(){
+            return $this->ufCliente;
         }
 
-        public function setCep($cep){
-            $this->cep = $cep;
+        public function setCepCliente($cepCliente){
+            $this->cepCliente = $cepCliente;
         }
 
-        public function getCep(){
-            return $this->cep;
+        public function getCepCliente(){
+            return $this->cepCliente;
         }
     }
 ?>
