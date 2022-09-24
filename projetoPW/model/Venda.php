@@ -1,13 +1,13 @@
 <?php
     class Venda{
-        private $id, $dataVenda, $valorTotal, $status, $idCliente;
+        private $codvenda, $dataVenda, $valorTotal, $status, $codCliente;
 
-        public function getId(){
-            return $this->id;
+        public function getCodVenda(){
+            return $this->codVenda;
         }
 
-        public function setId($id){
-            $this->id = $id;
+        public function setCodVenda($codVenda){
+            $this->codvenda = $codVenda;
         }
         
         public function getDataVenda(){
@@ -34,12 +34,12 @@
             $this->status = $status;
         }
 
-        public function getIdCliente(){
-            return $this->idCliente;
+        public function getCodCliente(){
+            return $this->codCliente;
         }
 
-        public function setIdCliente($idCliente){
-            $this->idCliente = $idCliente;
+        public function setCodCliente($codCliente){
+            $this->codCliente = $codCliente;
         }
     }
 ?>
