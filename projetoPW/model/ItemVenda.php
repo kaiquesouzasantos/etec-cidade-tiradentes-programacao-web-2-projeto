@@ -1,47 +1,26 @@
 <?php
+    require_once("../router.php");
 
     class ItemVenda{
+        private $codItemVenda, $venda, $produto, $qtdItemVenda, $subtotalItemVenda;
         
-        private $codItemvenda, $codVenda, $codProduto, $qtdItemvenda, $subtotalItemVenda;
+        public function getCodItemVenda(){return $this->codItemVenda;}
+        public function setCodItemVenda($codItemVenda){$this->codItemVenda = $codItemVenda;}
         
-        public function getCodItemvenda(){
-            return $this->codItemvenda;
-        }
-
-        public function setCodItemvenda($codItemvenda){
-            $this->codItemvenda = $codItemvenda;
-        }
+        // venda -> Venda OBJ
+        public function getVenda() : Venda {return $this->venda;}
+        public function setVenda($venda){$this->venda = $venda;}
         
-        public function getCodVenda(){
-            return $this->codVenda;
-        }
+        // produto -> Produto OBJ
+        public function getProduto() : Produto {return $this->produto;}
+        public function setProduto($produto){$this->produto = $produto;}
 
-        public function setCodVenda($codVenda){
-            $this->codVenda = $codVenda;
-        }
-        
-        public function getCodProduto(){
-            return $this->codProduto;
-        }
+        public function getQtdItemVenda(){return $this->qtdItemVenda;}
+        public function setQtdItemVenda($qtdItemVenda){$this->qtdItemVenda = $qtdItemVenda;}
 
-        public function setCodProduto($codProduto){
-            $this->codProduto = $codProduto;
-        }
-
-        public function getQtdItemvenda(){
-            return $this->qtdItemvenda;
-        }
-
-        public function setQtdItemvenda($qtdItemvenda){
-            $this->qtdItemvenda = $qtdItemvenda;
-        }
-
-        public function getSubtotalItemVenda(){
-            return $this->subtotalItemVenda;
-        }
-
-        public function setSubtotalItemVenda($subtotalItemVenda){
-            $this->subtotalItemVenda = $subtotalItemVenda;
+        public function getSubtotalItemVenda(){return $this->subtotalItemVenda;}
+        public function setSubtotalItemVenda(){
+            $this->subtotalItemVenda = $this->getProduto()->getPrecoProduto() * $this->qtdItemVenda;
         }
     }
 ?>
