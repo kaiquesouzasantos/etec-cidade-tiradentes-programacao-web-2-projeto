@@ -23,7 +23,7 @@
         }
 
         public static function retornaCategoria($codCategoria) : Categoria {
-            $stmt = self::getConexao()->query("SELECT * FROM tbProduto WHERE codProduto = ${codCategoria}");
+            $stmt = self::getConexao()->query("SELECT * FROM tbCategoria WHERE codCategoria = ${codCategoria}");
             
             $categoria = new Categoria();
             $categoria->construct_full($stmt['codCategoria'], $stmt['nomeCategoria']);
