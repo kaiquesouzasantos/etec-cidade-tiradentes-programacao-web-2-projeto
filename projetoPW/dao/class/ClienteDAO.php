@@ -50,7 +50,7 @@
         public static function retornaCategoria($codCliente) : Cliente {
             $stmt = self::getConexao()->query("SELECT * FROM tbProduto WHERE codProduto = ${codCliente}");
             
-            $cliente = new Cliente ();
+            $cliente = new Cliente();
             $cliente->construct_full(
                 $stmt['codCliente'], $stmt['nomeCliente'], $stmt['cpfCliente'],
                 $stmt['emailCliente'], $stmt['logradouroCliente'], $stmt['numLogCliente'],
