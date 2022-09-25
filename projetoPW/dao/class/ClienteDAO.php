@@ -1,7 +1,7 @@
 <?php
     require_once("../../router.php");
 
-    class CategoriaDAO {
+    class ClienteDAO {
         private static function getConexao(){
             return Conexao::getConexao();
         }
@@ -66,7 +66,7 @@
             $stmt = self::getConexao()->query("SELECT * FROM tbCliente")->fetchAll();
 
             foreach($stmt as $cliente){
-                $objeto = new Categoria();
+                $objeto = new Cliente();
                 $objeto->construct_full(
                     $cliente['codCliente'], $cliente['nomeCliente'], $cliente['cpfCliente'],
                     $cliente['emailCliente'], $cliente['logradouroCliente'], $cliente['numLogCliente'],
