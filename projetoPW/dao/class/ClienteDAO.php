@@ -47,7 +47,7 @@
             return true;
         }
 
-        public static function retornaCategoria($codCliente) : Cliente {
+        public static function retornaCliente($codCliente) : Cliente {
             $stmt = self::getConexao()->query("SELECT * FROM tbProduto WHERE codProduto = ${codCliente}");
             
             $cliente = new Cliente();
@@ -61,7 +61,7 @@
             return $cliente;
         }
 
-        public static function listaCategoria() : array {
+        public static function listaCliente() : array {
             $clientes = array();
             $stmt = self::getConexao()->query("SELECT * FROM tbCliente")->fetchAll();
 
