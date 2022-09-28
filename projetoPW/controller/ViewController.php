@@ -41,6 +41,7 @@
             </header>    
             ');
         }
+        
         public static function getFooter(){
             echo('
             <footer class="footer section">
@@ -89,8 +90,6 @@
 
                 <span class="footer__copy">&#169; Kaique Souza, Henry Modesto, Miguel Santos, Bruna Karen, Kauan Gabriel, Kaio Hergesel.</span>
             </footer>
-            ')
-
-
+            ');
     }
 ?>
