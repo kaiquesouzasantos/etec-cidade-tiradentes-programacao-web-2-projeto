@@ -12,9 +12,10 @@
 #
 ### TASKS
 - Front-End:
-  - Dashboard: arrumar alinhamento e criar visualização de dash ;
+  - Dashboard: arrumar alinhamento e criar visualização de dash;
   - Dashboard: separar cadastro de listagem;
   - Carrinho: arrumar padronização;
+  - Tela de Produto;
 - Back-End:
   - Classes Controller;
   - VendaDAO;
