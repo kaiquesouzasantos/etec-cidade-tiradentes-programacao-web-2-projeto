@@ -9,24 +9,24 @@
         public static function cadastrarCliente(
             $nomeCliente, $cpfCliente, $emailCliente, $logradouroCliente,
             $numLogCliente, $complementoCliente, $bairroCliente,
-            $cidadeCliente, $ufCliente, $cepCliente
+            $cidadeCliente, $ufCliente, $cepCliente, $imgCliente
         ){
             $cliente = new Cliente();
             $cliente->construct_min(
                 $nomeCliente, $cpfCliente, $emailCliente, $logradouroCliente,
                 $numLogCliente, $complementoCliente, $bairroCliente,
-                $cidadeCliente, $ufCliente, $cepCliente
+                $cidadeCliente, $ufCliente, $cepCliente, $imgCliente
             );
 
             $insertCliente = "
                 INSERT INTO tbCliente(
                     nomeCliente, cpfCliente, emailCliente, logradouroCliente,
                     numLogCliente, complementoCliente, bairroCliente,
-                    cidadeCliente, ufCliente, cepCliente
+                    cidadeCliente, ufCliente, cepCliente, fotoCliente
                 ) VALUES (
                     :nome, :cpf, :email, :log, 
                     :numLog, :complemento, :bairro,
-                    :cidade, :uf, :cep
+                    :cidade, :uf, :cep, :img
                 )";
             
             $stmt = self::getConexao()->prepare($insertCliente);
@@ -41,6 +41,7 @@
             $stmt->bindValue(":cidade", $cliente->getCidadeCliente());
             $stmt->bindValue(":uf", $cliente->getUfCliente());
             $stmt->bindValue(":cep", $cliente->getCepCliente());
+            $stmt->bindValue(":img", $cliente->getImgCliente());
 
             $stmt->execute();
 
@@ -55,7 +56,7 @@
                 $stmt['codCliente'], $stmt['nomeCliente'], $stmt['cpfCliente'],
                 $stmt['emailCliente'], $stmt['logradouroCliente'], $stmt['numLogCliente'],
                 $stmt['complementoCliente'], $stmt['bairroCliente'], $stmt['cidadeCliente'],
-                $stmt['ufCliente'], $stmt['cepCliente']
+                $stmt['ufCliente'], $stmt['cepCliente'], $stmt['fotoCliente']
             );
 
             return $cliente;
@@ -71,7 +72,7 @@
                     $cliente['codCliente'], $cliente['nomeCliente'], $cliente['cpfCliente'],
                     $cliente['emailCliente'], $cliente['logradouroCliente'], $cliente['numLogCliente'],
                     $cliente['complementoCliente'], $cliente['bairroCliente'], $cliente['cidadeCliente'],
-                    $cliente['ufCliente'], $cliente['cepCliente']
+                    $cliente['ufCliente'], $cliente['cepCliente'], $cliente['fotoCliente']
                 );
                 
                 array_push($clientes, $objeto);
