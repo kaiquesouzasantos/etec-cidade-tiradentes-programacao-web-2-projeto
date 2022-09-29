@@ -50,27 +50,53 @@
                 </div>
 
                 <div class="menu-items">
+
                     <ul class="nav-links">
-                        <li><a href="dashboard.php">
-                            <i class="uil uil-estate"></i>
-                            <span class="link-name">Dashboard</span>
+                    <li><a class="navdash-links" href="dashboard.php">
+                      <img class="icon-nav" src="assets/img/dash-icon.svg" alt="nav icon"> 
+                      <span class="link-name">Dashboard</span>
                         </a></li>
-                        <li><a href="cadastro-produto.php">
-                            <i class="uil uil-files-landscapes"></i>
+
+                        <li><a class="navdash-links" href="cadastro-produto.php">
+                        <img class="icon-nav" src="assets/img/product-icon.svg" alt="nav icon" />
                             <span class="link-name">Produto</span>
                         </a></li>
-                        <li><a href="cadastro-categoria.php">
-                            <i class="uil uil-files-landscapes"></i>
+                        
+                        <li><a class="navdash-links" href="cadastro-categoria.php">
+                        <img class="icon-nav" src="assets/img/category-icon.svg" alt="nav icon" />
                             <span class="link-name">Categoria</span>
                         </a></li>
-                        <li><a href="cliente.php">
-                            <i class="uil uil-files-landscapes"></i>
+
+                        <li><a class="navdash-links" href="cliente.php">
+                        <img class="icon-nav" src="assets/img/person-icon.svg" alt="nav icon" />
                             <span class="link-name">Clientes</span>
                         </a></li>
-                        <li><a href="vendas.php">
-                            <i class="uil uil-files-landscapes"></i>
+
+                        <li><a class="navdash-links" href="vendas.php">
+                            <img class="icon-nav" src="assets/img/buy-icon.svg" alt="nav icon" />
                             <span class="link-name">Vendas</span>
                         </a></li>
+
+                        <li><a class="navdash-links" href="cadastro-produto.php">
+                        <img class="icon-nav" src="assets/img/product-nobg-icon.svg" alt="nav icon" />
+                            <span class="link-name">Produtos Registrados</span>
+                        </a></li>
+
+                        <li><a class="navdash-links" href="cadastro-categoria.php">
+                        <img class="icon-nav" src="assets/img/category-nobg-icon.svg" alt="nav icon" />
+                            <span class="link-name">Categorias Registradas</span>
+                        </a></li>
+
+                        <li><a class="navdash-links" href="cliente.php">
+                        <img class="icon-nav" src="assets/img/person-nobg-icon.svg" alt="nav icon" />
+                            <span class="link-name">Clientes Registrados</span>
+                        </a></li>
+
+                        <li><a class="navdash-links" href="vendas.php">
+                                <img class="icon-nav" src="assets/img/buy-nobg-icon.svg" alt="nav icon" />
+                                <span class="link-name">Registro de vendas</span>
+                        </a></li>
+ 
                     </ul>
                     
                     <ul class="logout-mode">

@@ -118,6 +118,10 @@ nav .menu-items {
     position: relative;
 }
 
+.menu-items li:nth-child(5) { 
+    margin-bottom: 1rem;
+}
+
 .nav-links li a:hover:before {
     content: "";
     position: absolute;
@@ -157,6 +161,27 @@ nav.close li a .link-name {
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name {
     color: var(--primary-color);
+}
+
+.navdash-links {
+    display: flex;
+    gap: 10px; 
+    
+    opacity: 1;
+}
+
+.navdash-links:hover img[alt="nav icon"] {
+    opacity: .7;
+}
+
+img[alt="nav icon"] {
+    width: 20px;
+}
+
+img[alt="dash icon"] {
+    padding: 10px;
+    background-color: var(--box3-color);
+    border-radius: 10px;
 }
 
 body.dark .nav-links li a:hover i,
@@ -370,6 +395,9 @@ nav.close~.dashboard .top {
     width: 100%;
 }
 
+.activity-data {
+    justify-content: space-between;
+}
 
 .activity .activity-data {
     display: flex;
@@ -424,7 +452,7 @@ nav.close~.dashboard .top {
     nav {
         width: 73px;
     }
-
+    
     nav.close {
         width: 250px;
     }
@@ -463,6 +491,7 @@ nav.close~.dashboard .top {
         left: 73px;
         width: calc(100% - 73px);
     }
+
 
     nav.close~.dashboard .top {
         left: 250px;

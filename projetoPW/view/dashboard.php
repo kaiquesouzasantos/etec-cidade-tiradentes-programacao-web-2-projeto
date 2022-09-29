@@ -17,7 +17,7 @@
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <img src="assets/img/dashclip.svg" alt="dash icon"> 
                     <span class="text">Dashboard</span>
                 </div>
 
@@ -42,7 +42,7 @@
 
             <div class="activity">
                 <div class="title">
-                    <i class="uil uil-clock-three"></i>
+                    <img src="assets/img/clock-icon.svg" alt="dash icon">
                     <span class="text">Últimas Vendas</span>
                 </div>
 
