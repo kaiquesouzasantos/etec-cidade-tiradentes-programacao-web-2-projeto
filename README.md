@@ -20,6 +20,7 @@
   - Classes Controller;
   - VendaDAO;
   - Padronizar: Head, Header e Footer;
+  - ****Não sei se houve sobreposição em alguma classe model;
 - Banco de Dados:
   - Rotinas de Procedure: compare o que esta ocorrendo nas classes DAO e crie uma rotina que á atenda;
 
