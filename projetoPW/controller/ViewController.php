@@ -1,19 +1,19 @@
 <?php
     class ViewController {
-        public static function getHead(){
+        public static function getHead($css){
             echo('
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
                 <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-                <link rel="stylesheet" href="assets/css/styles.css">
+                <link rel="stylesheet" href="'.$css.'">
                 <title>Dev.Watch</title>
             </head>
             ');
         }
 
-        public static function getHeader(){
+        public static function getHeader($caminho){
             echo('
             <header class="header" id="header">
                 <nav class="nav container">
@@ -21,10 +21,10 @@
 
                     <div class="nav__menu" id="nav-menu">
                         <ul class="nav__list">
-                            <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
-                            <li class="nav__item"><a href="#quemsomos" class="nav__link">Sobre nós</a></li>
-                            <li class="nav__item"><a href="#produtos" class="nav__link">Produtos</a></li>
-                            <li class="nav__item"><a href="#comentario" class="nav__link">Comentários</a></li>
+                            <li class="nav__item"><a href="'.$caminho.'#home" class="nav__link active-link">Inicio</a></li>
+                            <li class="nav__item"><a href="'.$caminho.'#quemsomos" class="nav__link">Sobre nós</a></li>
+                            <li class="nav__item"><a href="'.$caminho.'#produtos" class="nav__link">Produtos</a></li>
+                            <li class="nav__item"><a href="'.$caminho.'#comentario" class="nav__link">Comentários</a></li>
                         </ul>
 
                         <div class="nav__close" id="nav-close"><i class="bx bx-x" ></i></div>
@@ -41,7 +41,55 @@
             </header>    
             ');
         }
-        public static function getFooter(){
+
+        public static function getNavDashboard(){
+            echo('
+            <nav>
+                <div class="logo-name">
+                    <span class="logo_name">Dev. Watch</span>
+                </div>
+
+                <div class="menu-items">
+                    <ul class="nav-links">
+                        <li><a href="dashboard.php">
+                            <i class="uil uil-estate"></i>
+                            <span class="link-name">Dashboard</span>
+                        </a></li>
+                        <li><a href="cadastro-produto.php">
+                            <i class="uil uil-files-landscapes"></i>
+                            <span class="link-name">Produto</span>
+                        </a></li>
+                        <li><a href="cadastro-categoria.php">
+                            <i class="uil uil-files-landscapes"></i>
+                            <span class="link-name">Categoria</span>
+                        </a></li>
+                        <li><a href="cliente.php">
+                            <i class="uil uil-files-landscapes"></i>
+                            <span class="link-name">Clientes</span>
+                        </a></li>
+                        <li><a href="vendas.php">
+                            <i class="uil uil-files-landscapes"></i>
+                            <span class="link-name">Vendas</span>
+                        </a></li>
+                    </ul>
+                    
+                    <ul class="logout-mode">
+                        <li>
+                            <a href=" ../operation/seguranca/logout.php">
+                                <i class="bx bx-log-out bx-flip-horizontal"></i>
+                                <span class="link-name">Logout</span>
+                            </a>
+                        </li>   
+                        <li class="mode">
+                            <div class="mode-toggle"></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            ');
+        }
+        
+        public static function getFooter($caminho){
             echo('
             <footer class="footer section">
                 <div class="footer__container container grid">
@@ -70,27 +118,17 @@
                         <h3 class="footer__title">Loja</h3>
 
                         <ul class="footer__links">
-                            <li><a href="#home" class="footer__link">Inicio</a></li>
-                            <li><a href="#recomendados" class="footer__link">Sobre nós</a></li>
-                            <li><a href="#produtos" class="footer__link">Produtos</a></li>
-                            <li><a href="#lancamentos" class="footer__link">Comentários</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__content">
-                        <h3 class="footer__title">Admin</h3>
-
-                        <ul class="footer__links">
-                            <li><a href="admin-login.html" class="footer__link">Login</a></li>
-
+                            <li><a href="'.$caminho.'#home" class="footer__link">Inicio</a></li>
+                            <li><a href="'.$caminho.'#recomendados" class="footer__link">Sobre nós</a></li>
+                            <li><a href="'.$caminho.'#produtos" class="footer__link">Produtos</a></li>
+                            <li><a href="'.$caminho.'#lancamentos" class="footer__link">Comentários</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <span class="footer__copy">&#169; Kaique Souza, Henry Modesto, Miguel Santos, Bruna Karen, Kauan Gabriel, Kaio Hergesel.</span>
             </footer>
-            ')
-
-
+            ');
+        }  
     }
 ?>

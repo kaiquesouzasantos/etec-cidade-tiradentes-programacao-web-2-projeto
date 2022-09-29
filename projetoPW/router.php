@@ -7,7 +7,6 @@
             "/dao/connect/", "/dao/class/"
         );
            
-        
         foreach ($caminhos as $caminho){
           $classe = __DIR__.$caminho.$nomeClasse.".php";
           

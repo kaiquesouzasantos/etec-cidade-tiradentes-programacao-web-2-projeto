@@ -11,7 +11,7 @@
             $this->imgProduto = $imgProduto;
         }
 
-        public function contruct_full($codProduto, $nomeProduto, $precoProduto, $categoria, $imgProduto){
+        public function construct_full($codProduto, $nomeProduto, $precoProduto, $categoria, $imgProduto){
             $this->codProduto = $codProduto;
             $this->construct_min($nomeProduto, $precoProduto, $categoria, $imgProduto);
         }

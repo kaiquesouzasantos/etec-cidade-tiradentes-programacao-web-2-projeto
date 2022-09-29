@@ -6,20 +6,21 @@
             return Conexao::getConexao();
         }
 
-        public static function cadastrarProduto($nome, $preco, $codCategoria){
+        public static function cadastrarProduto($nome, $preco, $codCategoria, $imagem){
             $produto = new Produto();
             $produto->construct_min(
-                $nome, $preco, CategoriaDAO::retornaCategoria($codCategoria)
+                $nome, $preco, CategoriaDAO::retornaCategoria($codCategoria), $imagem
             );
 
-            $insertProduto = "INSERT INTO tbProduto(nomeProduto, precoProduto, codCategoria) 
-                                VALUES (:nome, :preco, :categoria)";
+            $insertProduto = "INSERT INTO tbProduto(nomeProduto, precoProduto, codCategoria, imgProduto) 
+                                VALUES (:nome, :preco, :categoria, img)";
             
             $stmt = self::getConexao()->prepare($insertProduto);
         
             $stmt->bindValue(":nome", $produto->getNomeProduto());
             $stmt->bindValue(":preco", $produto->getPrecoProduto());
             $stmt->bindValue(":categoria", $produto->getCategoria()->getCodCategoria());
+            $stmt->bindValue(":img", $produto->getImgProduto());
 
             $stmt->execute();
 
@@ -30,23 +31,25 @@
             $stmt = self::getConexao()->query("SELECT * FROM tbProduto WHERE codProduto = ${codProduto}");
             
             $produto = new Produto();
-            $produto->contruct_full(
+            $produto->construct_full(
                 $stmt['codProduto'], $stmt['nomeProduto'], 
-                $stmt['precoProduto'], CategoriaDAO::retornaCategoria($stmt['codCategoria'])
+                $stmt['precoProduto'], CategoriaDAO::retornaCategoria($stmt['codCategoria']), 
+                $stmt['imgProduto']
             );
 
             return $produto;
         }
 
-        public static function listaPrduto() : array {
+        public static function listaProduto() : array {
             $produtos = array();
             $stmt = self::getConexao()->query("SELECT * FROM tbProduto")->fetchAll();
 
             foreach($stmt as $produto){
                 $objeto = new Produto();
-                $objeto->contruct_full(
+                $objeto->construct_full(
                     $produto['codProduto'], $produto['nomeProduto'], 
-                    $produto['precoProduto'], CategoriaDAO::retornaCategoria($produto['codCategoria'])
+                    $produto['precoProduto'], CategoriaDAO::retornaCategoria($produto['codCategoria']),
+                    $produto['imgProduto']
                 );
                 
                 array_push($produtos, $objeto);
