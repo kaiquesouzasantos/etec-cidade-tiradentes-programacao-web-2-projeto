@@ -13,14 +13,14 @@
 ### TASKS
 - Front-End:
   - Dashboard: arrumar alinhamento e criar visualização de dash;
-  - Dashboard: separar cadastro de listagem;
   - Carrinho: arrumar padronização;
   - Tela de Produto;
+  - Tela de Cadastro de Categoria: alinhar;
+  - Tela de Cadastro de Cliente: melhorar organização dos elementos;
 - Back-End:
   - Classes Controller;
   - VendaDAO;
-  - Padronizar: Head, Header e Footer;
-  - ****Não sei se houve sobreposição em alguma classe model;
+  - Criar mascaras nos formularios;
 - Banco de Dados:
   - Rotinas de Procedure: compare o que esta ocorrendo nas classes DAO e crie uma rotina que á atenda;
 
