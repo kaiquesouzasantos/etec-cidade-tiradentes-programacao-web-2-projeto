@@ -17,6 +17,7 @@
   - Tela de Produto;
   - Tela de Cadastro de Categoria: alinhar;
   - Tela de Cadastro de Cliente: melhorar organização dos elementos;
+  - Tela de Confirmação e Alerta de Cadastro: Produto, Categoria e Clinte;
 - Back-End:
   - Classes Controller;
   - VendaDAO;
