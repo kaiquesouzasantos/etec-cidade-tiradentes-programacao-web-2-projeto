@@ -12,7 +12,7 @@
 #
 ### TASKS
 - Front-End:
-  - Dashboard: arrumar alinhamento e criar visualização de dash;
+  - Dashboard: criar visualização de dash;
   - Carrinho: arrumar padronização;
   - Tela de Produto;
   - Tela de Cadastro de Categoria: alinhar;
