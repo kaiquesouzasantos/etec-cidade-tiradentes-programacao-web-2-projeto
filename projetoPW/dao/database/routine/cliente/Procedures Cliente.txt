@@ -1,0 +1,61 @@
+--ATUALIZA CLIENTE 
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spAtualizaCliente` (IN `cod_Cliente` INT, IN `nome_Cliente` VARCHAR(100), IN `CPF_Cliente` VARCHAR(15), IN `email_Cliente` VARCHAR(100), IN `senha_Cliente` VARCHAR(100), IN `logradouro_Cliente` VARCHAR(100), IN `numLog_Cliente` INT, IN `comp_Cliente` VARCHAR(15), IN `bairro_Cliente` VARCHAR(100), IN `cidade_Cliente` VARCHAR(100), IN `UF_Cliente` VARCHAR(2), IN `CEP_Cliente` VARCHAR(10), IN `atividade_Cliente` INT, IN `foto_Cliente` VARCHAR(200), OUT `saida` VARCHAR(50))   BEGIN
+	IF NOT EXISTS (SELECT codCliente FROM tbcliente WHERE codCliente = cod_Cliente)THEN
+    	BEGIN
+    		SET saida = 'NÃO À REGISTROS';
+        END;
+    ELSE
+    	BEGIN
+        	UPDATE tbcliente
+   			SET nomeCliente = nome_Cliente, CPFCliente = CPF_Cliente, emailCliente = email_Cliente, senhaCliente = senha_Cliente, logradouroCliente = logradouro_Cliente, numLogCliente = numLog_Cliente, compCliente = comp_Cliente, bairroCliente = bairro_Cliente, cidadeCliente = cidade_Cliente, UFCliente = UF_Cliente, CEPCliente = CEP_Cliente, atividadeCliente = atividade_Cliente, fotoCliente = foto_Cliente
+    		WHERE codCliente = cod_Cliente;
+            
+            SET saida = 'UPDATE REALIZADO!';
+        END;
+	END IF;
+END$$
+
+
+--INSERE CLIENTE
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spInserirCliente` (IN `nome_Cliente` VARCHAR(100), IN `CPF_Cliente` VARCHAR(15), IN `email_Cliente` VARCHAR(100), IN `senha_Cliente` VARCHAR(100), IN `logradouro_Cliente` VARCHAR(100), IN `numLog_Cliente` INT, IN `comp_Cliente` VARCHAR(15), IN `bairro_Cliente` VARCHAR(100), IN `cidade_Cliente` VARCHAR(100), IN `UF_Cliente` VARCHAR(2), IN `CEP_Cliente` VARCHAR(10), IN `atividade_Cliente` INT, IN `foto_Cliente` VARCHAR(200), OUT `saida` VARCHAR(50))   BEGIN
+	DECLARE CodCliente INT;
+    IF EXISTS ( SELECT CPFCliente FROM tbcliente WHERE CPFCliente LIKE CPF_Cliente ) THEN
+    	BEGIN
+    		SET	saida = 'CLIENTE JÁ CADASTRADO';
+		END;
+	ELSE
+		BEGIN
+    		INSERT INTO tbcliente(nomeCliente, CPFCliente, emailCliente, senhaCliente, logradouroCliente, numLogCliente, compCliente, bairroCliente, cidadeCliente, UFCliente, CEPCliente, atividadeCliente, fotoCliente)
+			VALUES(nome_Cliente, CPF_Cliente, email_Cliente, senha_Cliente, logradouro_Cliente, numLog_Cliente, comp_Cliente, bairro_Cliente, cidade_Cliente, UF_Cliente, CEP_Cliente, atividade_Cliente, foto_Cliente);
+            SET CodCliente = (SELECT MAX(CodCliente) FROM tbcliente);
+			SET saida = 'CADASTRO REALIZADO!';
+		END;
+	END IF;
+END$$
+
+
+SELECTS DO CLIENTE
+
+	SELECT PELO CÓDIGO
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spCodigoCliente` (IN `cod_Cliente` INT, OUT `saida` VARCHAR(50))   BEGIN
+	IF NOT EXISTS (SELECT codCliente FROM tbcliente WHERE codCliente = cod_Cliente)THEN
+    	BEGIN
+    		SET saida = 'CÓDIGO NÃO ENCONTRADO';
+        END;
+    ELSE
+    	BEGIN
+        	SELECT nomeCliente FROM tbcliente WHERE codCliente = cod_Cliente;
+            SET saida = 'CÓDIGO ENCONTRADO';
+        END;
+	END IF;
+END$$
+
+
+	SELECT DA TABELA INTEIRA
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spTodosClientes` ()   SELECT * FROM tbcliente$$
+
+
