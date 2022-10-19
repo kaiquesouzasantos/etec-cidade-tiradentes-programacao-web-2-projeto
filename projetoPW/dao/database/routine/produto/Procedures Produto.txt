@@ -1,0 +1,57 @@
+--ATUALIZA PRODUTO
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spAtualizaProduto` (IN `cod_Produto` INT, IN `nome_Produto` VARCHAR(50), IN `preco_Produto` DOUBLE, IN `desc_Produto` VARCHAR(800), IN `cod_Categoria` INT, IN `foto_Produto` VARCHAR(200), OUT `saida` VARCHAR(50))   BEGIN
+	IF NOT EXISTS (SELECT codProduto FROM tbproduto WHERE codProduto = cod_Produto)THEN
+    	BEGIN
+    		SET saida = 'NÃO À REGISTROS';
+        END;
+    ELSE
+    	BEGIN
+        	UPDATE tbproduto
+   			SET nomeProduto = nome_Produto, precoProduto = preco_Produto, descProduto = desc_Produto, codCategoria = cod_Categoria, fotoProduto = foto_Produto
+    		WHERE codProduto = cod_Produto;
+            
+            SET saida = 'UPDATE REALIZADO!';
+        END;
+	END IF;
+END$$
+
+--INSERE PRODUTO
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spInserirProduto` (IN `nome_Produto` VARCHAR(50), IN `preco_Produto` DOUBLE, IN `desc_Produto` VARCHAR(800), IN `cod_Categoria` INT, IN `foto_Produto` VARCHAR(200), OUT `saida` VARCHAR(50))   BEGIN
+	DECLARE codProduto INT;
+    IF EXISTS ( SELECT nomeProduto FROM tbproduto WHERE nomeProduto LIKE nome_Produto ) THEN
+    	BEGIN
+    		SET	saida = 'PRODUTO JÁ CADASTRADO';
+		END;
+	ELSE
+		BEGIN
+    		INSERT INTO tbproduto( nomeProduto, precoProduto, descProduto, codCategoria, fotoProduto)
+			VALUES( nome_Produto, preco_Produto, desc_Produto, cod_Categoria, foto_Produto);
+            SET codProduto = (SELECT MAX(codProduto) FROM tbproduto);
+			SET saida = 'CADASTRO REALIZADO!';
+		END;
+	END IF;
+END$$
+
+--SELECTS DO PRODUTO
+
+	SELECT PELO CÓDIGO
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spCodigoProduto` (IN `cod_Produto` INT, OUT `saida` VARCHAR(50))   BEGIN
+	IF NOT EXISTS (SELECT codProduto FROM tbproduto WHERE codProduto = cod_Produto)THEN
+    	BEGIN
+    		SET saida = 'CÓDIGO NÃO ENCONTRADO';
+        END;
+    ELSE
+    	BEGIN
+        	SELECT nomeProduto FROM tbproduto WHERE codProduto = cod_Produto;
+            SET saida = 'CÓDIGO ENCONTRADO';
+        END;
+	END IF;
+END$$
+
+	
+	SELECT DA TABELA INTEIRA
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spTodosProdutos` ()   SELECT * FROM tbproduto$$
