@@ -10,7 +10,6 @@
     <!-- SECTION -->
     <section class="dashboard">
         <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
             <img src="assets/img/icon_admin.png" alt="">
         </div>
 

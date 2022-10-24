@@ -14,8 +14,6 @@
     <!-- SECTION -->
     <section class="dashboard">
         <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
-
             <img src="../../assets/img/icon_admin.png" alt="">
         </div>
 
@@ -32,7 +30,6 @@
                             <label class="form-label data-form">Nome da Categoria</label>
                             <input type="text" class="form-control" name="txtNome" minlength="3" maxlength="50" required>
                         </div>
-
 
                         <div class="col-12">
                             <button type="submit" class="btn btn-warning">Cadastrar</button>

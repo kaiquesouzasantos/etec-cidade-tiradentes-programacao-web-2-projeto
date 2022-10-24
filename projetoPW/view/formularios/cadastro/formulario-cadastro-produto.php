@@ -13,8 +13,6 @@
     <!-- SECTION -->
     <section class="dashboard">
         <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
-
             <img src="assets/img/icon_admin.png" alt="">
         </div>
 
@@ -42,7 +40,6 @@
                                 <?php CategoriaController::listaOpcoesCategoria(); ?>
                             </select>
                         </div>
-
                         <div class="mb-3">
                             <label class="form-label data-form">Descrição</label>
                             <textarea type="text" class="form-control" name="txtDescricao" rows="3" minlength="10" maxlength="300" required></textarea>
@@ -54,7 +51,7 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-label data-form">Quantidade</label>
-                            <input type="number" class="form-control" name="txtQuantidade" placeholder="1" min="1" required>
+                            <input type="number" class="form-control" name="txtQuantidade" placeholder="1" min="1" required >
                         </div>
 
                         <div class="col-12">

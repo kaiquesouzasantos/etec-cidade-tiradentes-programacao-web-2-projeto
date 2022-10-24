@@ -82,27 +82,17 @@
                             <span class="link-name">Categoria</span>
                         </a></li>
 
-                        <li><a class="navdash-links" href="'.$arquivo.'cliente.php">
-                        <img class="icon-nav" src="'.$caminho.'assets/img/person-icon.svg" alt="nav icon" />
-                            <span class="link-name">Clientes</span>
-                        </a></li>
-
-                        <li><a class="navdash-links" href="'.$arquivo.'vendas.php">
-                            <img class="icon-nav" src="'.$caminho.'assets/img/buy-icon.svg" alt="nav icon" />
-                            <span class="link-name">Vendas</span>
-                        </a></li>
-
-                        <li><a class="navdash-links" href="'.$arquivo.'cadastro-produto.php">
+                        <li><a class="navdash-links" href="'.$arquivo.'produtos.php">
                         <img class="icon-nav" src="'.$caminho.'assets/img/product-nobg-icon.svg" alt="nav icon" />
                             <span class="link-name">Produtos Registrados</span>
                         </a></li>
 
-                        <li><a class="navdash-links" href="'.$arquivo.'cadastro-categoria.php">
+                        <li><a class="navdash-links" href="'.$arquivo.'categorias.php">
                         <img class="icon-nav" src="'.$caminho.'assets/img/category-nobg-icon.svg" alt="nav icon" />
                             <span class="link-name">Categorias Registradas</span>
                         </a></li>
 
-                        <li><a class="navdash-links" href="'.$arquivo.'cliente.php">
+                        <li><a class="navdash-links" href="'.$arquivo.'clientes.php">
                         <img class="icon-nav" src="'.$caminho.'assets/img/person-nobg-icon.svg" alt="nav icon" />
                             <span class="link-name">Clientes Registrados</span>
                         </a></li>
