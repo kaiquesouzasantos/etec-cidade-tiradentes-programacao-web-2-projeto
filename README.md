@@ -16,15 +16,12 @@
   - Carrinho: arrumar padronização;
   - Tela de Produto;
   - Tela de Cadastro de Categoria: alinhar;
-  - Tela de Cadastro de Cliente: melhorar organização dos elementos;
   - Tela de Confirmação e Alerta de Cadastro: Produto, Categoria e Clinte;
   - Filtros de Produto por: Categoria, Nome, Tendencia e Faixa de Preço.
 - Back-End:
-  - Classes Controller;
   - VendaDAO;
   - Criar mascaras nos formularios;
   - Mecanismos de verificação e proteção de informação;
-  - Cadastro de Produtos;
 - Banco de Dados:
   - Rotinas de Procedure: compare o que esta ocorrendo nas classes DAO e crie uma rotina que á atenda;
 
