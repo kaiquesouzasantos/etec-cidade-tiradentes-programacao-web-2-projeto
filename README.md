@@ -12,18 +12,14 @@
 #
 ### TASKS
 - Front-End:
-  - Dashboard: criar visualização de dash;
   - Carrinho: arrumar padronização;
   - Tela de Produto;
-  - Tela de Cadastro de Categoria: alinhar;
-  - Tela de Confirmação e Alerta de Cadastro: Produto, Categoria e Clinte;
   - Filtros de Produto por: Categoria, Nome, Tendencia e Faixa de Preço.
 - Back-End:
   - VendaDAO;
   - Criar mascaras nos formularios;
-  - Mecanismos de verificação e proteção de informação;
-- Banco de Dados:
-  - Rotinas de Procedure: compare o que esta ocorrendo nas classes DAO e crie uma rotina que á atenda;
+  - Pesquisa de coisa: categoria, produto, venda(por data);
+  - Procedimento de atualização de delete;
 
 #
 ### DESTAQUES
