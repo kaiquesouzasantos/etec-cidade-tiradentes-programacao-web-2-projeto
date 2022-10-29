@@ -1,0 +1,59 @@
+--ATUALIZA CATEGORIA
+	
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spAtualizaCategoria` (IN `cod_Categoria` INT, IN `nome_Categoria` VARCHAR(20), OUT `saida` VARCHAR(50))   BEGIN
+	IF NOT EXISTS (SELECT codCategoria FROM tbcategoria WHERE codCategoria = cod_Categoria)THEN
+    	BEGIN
+    		SET saida = 'NÃO À REGISTROS';
+        END;
+    ELSE
+    	BEGIN
+        	UPDATE tbcategoria
+   			SET nomeCategoria = nome_Categoria
+    		WHERE codCategoria = cod_Categoria;
+            
+            SET saida = 'UPDATE REALIZADO!';
+        END;
+	END IF;
+END$$
+
+
+--INSERE CATEGORIA
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spInserirCategoria` (IN `nome_Categoria` VARCHAR(15), OUT `saida` VARCHAR(50))   BEGIN
+    DECLARE codCategoria INT;
+    IF EXISTS (SELECT nomeCategoria FROM tbCategoria WHERE nomeCategoria LIKE nome_Categoria) THEN
+        BEGIN
+            SET saida = 'CATEGORIA JÁ CADASTRADA!';
+        END;
+    ELSE
+        BEGIN    
+            INSERT INTO tbCategoria (nomeCategoria)
+            VALUES(nome_Categoria);
+            SET codCategoria = (SELECT MAX(codCategoria)FROM tbCategoria);
+            SET saida = 'CADASTRO REALIZADO!';
+        END;
+    END IF;
+END$$
+
+
+--SELECTS DA CATEGORIA
+
+	SELECT PELO CÓDIGO
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spCodigoCategoria` (IN `cod_Categoria` INT, OUT `saida` VARCHAR(50))   BEGIN
+	IF NOT EXISTS (SELECT codCategoria FROM tbcategoria WHERE codCategoria = cod_Categoria)THEN
+    	BEGIN
+    		SET saida = 'CÓDIGO NÃO ENCONTRADO';
+        END;
+    ELSE
+    	BEGIN
+        	SELECT nomeCategoria FROM tbcategoria WHERE codCategoria = cod_Categoria;
+            SET saida = 'CÓDIGO ENCONTRADO';
+        END;
+	END IF;
+END$$
+
+
+	SELECT DA TABELA INTEIRA
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `spTodasCategorias` ()   SELECT * FROM tbCategoria$$
