@@ -1,0 +1,24 @@
+.preview {
+  width: 20%;
+  margin-right: 40%;
+}
+
+.main-sidebar {
+  height: 100vh;
+  position: fixed !important;
+}
+
+.forms {
+  width: 100%;
+}
+
+.col-12 {
+  margin-bottom: 5rem;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  z-index: 1000;
+}
