@@ -14,7 +14,8 @@
 - Front-End:
   - Carrinho: arrumar padronização;
   - Tela de Produto;
-  - Filtros de Produto por: Categoria, Nome, Tendencia e Faixa de Preço.
+  - Filtros de Produto por: Categoria, Nome, Tendencia e Faixa de Preço;
+  - Ajudar icones da barra lateral do dashboard;
 - Back-End:
   - VendaDAO;
   - Criar mascaras nos formularios;
