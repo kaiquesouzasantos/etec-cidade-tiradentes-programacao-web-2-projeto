@@ -20,7 +20,7 @@
   - VendaDAO;
   - Criar mascaras nos formularios;
   - Pesquisa de coisa: categoria, produto, venda(por data);
-  - Procedimento de atualização de delete;
+  - Procedimento de delete;
 
 #
 ### DESTAQUES
