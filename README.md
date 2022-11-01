@@ -22,11 +22,12 @@
   - Tela de Produto;
   - Filtros de Produto por: Categoria, Nome, Tendencia e Faixa de Preço;
   - Ajudar icones da barra lateral do dashboard;
+  - Otimizar tela de carrinho;
+  - Elaborar tela de navegação interna do usuario logado.
 - Back-End:
   - VendaDAO;
   - Criar mascaras nos formularios;
-  - Pesquisa de coisa: categoria, produto, venda(por data);
-  - Procedimento de delete;
+  - Pesquisa de coisa: categoria, produto, venda(por data).
 
 #
 ### DESTAQUES
@@ -39,6 +40,9 @@
 
 #
 ### TECNOLOGIAS
+- [HTML]()
+- [CSS]()
+- [JAVASCRIPT]()
 - [PHP](https://www.php.net/docs.php)
 - [MYSQL](https://dev.mysql.com/doc)
 
