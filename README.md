@@ -10,6 +10,12 @@
 - Repositório contendo o desenvolvimento do projeto final na disciplina de Programação Web II na Etec Cidade Tiradentes.
 
 #
+### AVISO
+- Descompactar:
+   - projetoPW/view/dashboard.zip
+   - projetoPW/view/assets/img.zip
+
+#
 ### TASKS
 - Front-End:
   - Carrinho: arrumar padronização;
