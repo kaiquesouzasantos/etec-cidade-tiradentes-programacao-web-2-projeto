@@ -18,11 +18,7 @@
 #
 ### TASKS
 - Front-End:
-  - Carrinho: arrumar padronização;
-  - Tela de Produto;
   - Filtros de Produto por: Categoria, Nome, Tendencia e Faixa de Preço;
-  - Ajudar icones da barra lateral do dashboard;
-  - Otimizar tela de carrinho;
   - Elaborar tela de navegação interna do usuario logado.
 - Back-End:
   - VendaDAO;
