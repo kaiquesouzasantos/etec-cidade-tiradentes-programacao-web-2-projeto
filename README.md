@@ -22,6 +22,7 @@
   - Elaborar tela de navegação interna do usuario logado.
 - Back-End:
   - VendaDAO;
+  - Sistema de Login para o usuario;
   - Criar mascaras nos formularios;
   - Pesquisa de coisa: categoria, produto, venda(por data).
 
