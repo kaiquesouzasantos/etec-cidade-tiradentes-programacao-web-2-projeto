@@ -12,11 +12,13 @@
 #
 ### TASKS
 - Front-End:
-  - Elaborar tela de navegação interna do usuario logado.
+  - Elaborar tela de navegação interna do usuario logado(compras, dados).
+  - Checkout de Venda;
 - Back-End:
   - VendaDAO;
-  - Sistema de Login para o usuario;
-
+  - Sistema de Login para o usuario(procedimento);
+  - Logica de Dashboard;
+  
 #
 ### DESTAQUES
 - MVC - DAO;
