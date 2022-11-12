@@ -10,21 +10,12 @@
 - Repositório contendo o desenvolvimento do projeto final na disciplina de Programação Web II na Etec Cidade Tiradentes.
 
 #
-### AVISO
-- Descompactar:
-   - projetoPW/view/dashboard.zip
-   - projetoPW/view/assets/img.zip
-
-#
 ### TASKS
 - Front-End:
-  - Filtros de Produto por: Categoria, Nome, Tendencia e Faixa de Preço;
   - Elaborar tela de navegação interna do usuario logado.
 - Back-End:
   - VendaDAO;
   - Sistema de Login para o usuario;
-  - Criar mascaras nos formularios;
-  - Pesquisa de coisa: categoria, produto, venda(por data).
 
 #
 ### DESTAQUES
