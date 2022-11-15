@@ -18,11 +18,24 @@
   - Procedures de Venda e ItemVenda.
   
 #
+### EQUIPE
+- *Kaique*: Full-Stack | Arquiteto de Software
+- *Kauan Gabriel*: Administrador do Banco de Dados
+- *Kaio Kenuy*: Secretário
+- *Bruna*: Front-End
+- *Miguel*: Front-End
+- *Henry*: Front-End
+
+#
 ### DESTAQUES
 - Arquitetura de Software;
+- Dashboard Avançado;
+- Busca Aproximada;
+- Otimização de Design;
 - Estrutura de Dados;
 - Orientação á Objetos;
 - Boas Praticas e Clean Code;
+- Implementação de Segurança e Práticas de LGPD;
 - Conexão com Banco de Dados(PDO).
 
 #
