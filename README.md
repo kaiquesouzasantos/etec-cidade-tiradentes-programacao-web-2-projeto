@@ -12,10 +12,7 @@
 #
 ### TASKS
 - Front-End:
-  - Elaborar tela de navegação interna do usuario logado(compras, dados);
   - Otimização de alguns componentes.
-- Back-End:
-  - Procedures de Venda e ItemVenda.
   
 #
 ### EQUIPE
