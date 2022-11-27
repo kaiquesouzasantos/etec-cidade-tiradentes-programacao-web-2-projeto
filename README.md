@@ -11,12 +11,12 @@
   
 #
 ### EQUIPE
-- *Kaique Souza Santos*: Back-End | Arquiteto de Software
-- *Kauan Gabriel Franca Rodrigues*: Administrador do Banco de Dados
-- *Kaio Kenuy Da Silva Hergesel*: Secretário
-- *Bruna Karen Gomes Lopes*: Front-End
-- *Miguel De Oliveira Santos*: Front-End
-- *Henry Oliveira Modesto De Jesus*: Front-End
+- <b>*Kaique Souza Santos*</b>: Back-End | Arquiteto de Software
+- <b>*Kauan Gabriel Franca Rodrigues*</b>: Administrador do Banco de Dados
+- <b>*Kaio Kenuy Da Silva Hergesel*</b>: Secretário
+- <b>*Bruna Karen Gomes Lopes*</b>: Front-End
+- <b>*Miguel De Oliveira Santos*</b>: Front-End
+- <b>*Henry Oliveira Modesto De Jesus*</b>: Front-End
 
 #
 ### DESTAQUES
