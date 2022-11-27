@@ -16,7 +16,7 @@
   
 #
 ### EQUIPE
-- *Kaique*: Full-Stack | Arquiteto de Software
+- *Kaique*: Back-End | Arquiteto de Software
 - *Kauan Gabriel*: Administrador do Banco de Dados
 - *Kaio Kenuy*: Secretário
 - *Bruna*: Front-End
@@ -33,7 +33,8 @@
 - Orientação á Objetos;
 - Boas Praticas e Clean Code;
 - Implementação de Segurança e Práticas de LGPD;
-- Conexão com Banco de Dados(PDO).
+- Conexão com Banco de Dados(PDO);
+- Implementação de Procedimentos SQL.
 
 #
 ### TECNOLOGIAS
