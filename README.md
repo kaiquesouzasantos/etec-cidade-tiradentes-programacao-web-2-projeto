@@ -8,20 +8,15 @@
 ### SOBRE
 
 - Repositório contendo o desenvolvimento do projeto final na disciplina de Programação Web II na Etec Cidade Tiradentes.
-
-#
-### TASKS
-- Front-End:
-  - Otimização de alguns componentes.
   
 #
 ### EQUIPE
-- *Kaique*: Back-End | Arquiteto de Software
-- *Kauan Gabriel*: Administrador do Banco de Dados
-- *Kaio Kenuy*: Secretário
-- *Bruna*: Front-End
-- *Miguel*: Front-End
-- *Henry*: Front-End
+- *Kaique Souza Santos*: Back-End | Arquiteto de Software
+- *Kauan Gabriel Franca Rodrigues*: Administrador do Banco de Dados
+- *Kaio Kenuy Da Silva Hergesel*: Secretário
+- *Bruna Karen Gomes Lopes*: Front-End
+- *Miguel De Oliveira Santos*: Front-End
+- *Henry Oliveira Modesto De Jesus*: Front-End
 
 #
 ### DESTAQUES
