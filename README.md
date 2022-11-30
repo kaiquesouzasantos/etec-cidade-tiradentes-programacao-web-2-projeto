@@ -32,6 +32,15 @@
 - Implementação de Procedimentos SQL.
 
 #
+### USUARIOS DE TESTE
+- *Cliente:*
+  - teste@gmail
+  - 123456
+- *Administrador:*
+  - adm
+  - 123
+
+#
 ### TECNOLOGIAS
 - [HTML]()
 - [CSS]()
