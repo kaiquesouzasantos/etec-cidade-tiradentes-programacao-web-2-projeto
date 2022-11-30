@@ -11,7 +11,7 @@
   
 #
 ### EQUIPE
-- <b>*Kaique Souza Santos*</b>: Back-End | Arquiteto de Software
+- <b>*Kaique Souza Santos*</b>: Back-End | Gestor do Projeto
 - <b>*Kauan Gabriel Franca Rodrigues*</b>: Administrador do Banco de Dados
 - <b>*Kaio Kenuy Da Silva Hergesel*</b>: Secretário
 - <b>*Bruna Karen Gomes Lopes*</b>: Front-End
