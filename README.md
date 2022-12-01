@@ -11,12 +11,12 @@
   
 #
 ### EQUIPE
+- <b>*Bruna Karen Gomes Lopes*</b>: Front-End
+- <b>*Kaio Kenuy Da Silva Hergesel*</b>: Secretário
 - <b>*Kaique Souza Santos*</b>: Back-End | Gestor do Projeto
 - <b>*Kauan Gabriel Franca Rodrigues*</b>: Administrador do Banco de Dados
-- <b>*Kaio Kenuy Da Silva Hergesel*</b>: Secretário
-- <b>*Bruna Karen Gomes Lopes*</b>: Front-End
-- <b>*Miguel De Oliveira Santos*</b>: Front-End
 - <b>*Henry Oliveira Modesto De Jesus*</b>: Front-End
+- <b>*Miguel De Oliveira Santos*</b>: Front-End
 
 #
 ### DESTAQUES
